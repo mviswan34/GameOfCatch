@@ -318,10 +318,10 @@ def main():
     
     #HTML Font Description
     st.markdown('<style>h1 { font-size: 32px; text-align: center; }</style>', unsafe_allow_html=True)
-    st.markdown('<style>p1 { font-size: 25px; text-align: justify; }</style>', unsafe_allow_html=True)
-    st.markdown('<style>h2 { font-size: 25px; }</style>', unsafe_allow_html=True)
-    st.markdown('<style>p2 { font-size: 22px; }</style>', unsafe_allow_html=True)
-    st.markdown('<style>.custom-font { font-family: "Verdana, sans-serif"; font-size: 20px; }</style>', unsafe_allow_html=True)
+    st.markdown('<style>p1 { font-size: 22px; text-align: justify; }</style>', unsafe_allow_html=True)
+    st.markdown('<style>h2 { font-size: 22px; }</style>', unsafe_allow_html=True)
+    st.markdown('<style>p2 { font-size: 20px; }</style>', unsafe_allow_html=True)
+    st.markdown('<style>.custom-font { font-family: "Verdana, sans-serif"; font-size: 18px; }</style>', unsafe_allow_html=True)
     ########           st.markdown('<p1></p1>', unsafe_allow_html=True)
     #Title
     st.title('Code & Catch Quest: Programming AI for Strategic Play')
