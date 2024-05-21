@@ -332,7 +332,7 @@ def main():
         st.session_state.show_config = False
 
     #Introduction
-    st.markdown("""<div style='text-align: justify; font-size: 16px;'>
+    st.markdown("""<div style='text-align: justify; font-size: 19px;'>
                         Welcome to 'Code & Catch Quest: Programming AI for Strategic Play.' This site offers a clear view into the world of 
                 artificial intelligence as it tackles the realm of games. It's a place to see firsthand how AI can be taught to think, decide, 
                 and learn through Q-Learning and Deep Q-Learning. The journey begins with a simple game that serves as a testing ground for 
