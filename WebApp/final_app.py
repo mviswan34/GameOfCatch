@@ -92,7 +92,7 @@ def plot_game_environment(state, grid_height, grid_width, reward=None):
     plt.figure(figsize=(5, 5), dpi=100)
 
     # Load and display background image
-    background_image_path = "images/inverted_bg.png"
+    background_image_path = "WebApp/images/inverted_bg.png"
     background = plt.imread(background_image_path)
     plt.imshow(background, extent=[0, grid_width, grid_height, 0])
 
@@ -331,8 +331,6 @@ def main():
     if 'show_config' not in st.session_state:
         st.session_state.show_config = False
 
-    st.write("Current working directory:", os.getcwd())
-
     #Introduction
     st.markdown("""<div style='text-align: justify; font-size: 25px;'>
                         Welcome to 'Code & Catch Quest: Programming AI for Strategic Play.' This site offers a clear view into the world of 
@@ -411,7 +409,7 @@ def main():
         t1,t2 = st.columns([0.1,1])
         with t1:
             st.markdown(" ")
-            arrow = "images/Arrow_right.png"
+            arrow = "WebApp/images/Arrow_right.png"
             st.image(arrow)
         with t2:
             st.markdown("""<div style='text-align: justify; font-size: 23.5px;'>
@@ -426,7 +424,7 @@ def main():
         st.markdown(" ")
         st.markdown(" ")
         st.markdown(" ")
-        qtable_img = "images/q_table.png"
+        qtable_img = "WebApp/images/q_table.png"
         st.image(qtable_img)
     
     st.markdown(" ")
@@ -435,7 +433,7 @@ def main():
     t1,t2 = st.columns([0.03,1])
     with t1:
             st.markdown(" ")
-            arrow = "images/Arrow_right.png"
+            arrow = "WebApp/images/Arrow_right.png"
             st.image(arrow)
     with t2:
             st.markdown("""<div style='text-align: justify; font-size: 23.5px;'>
@@ -472,7 +470,7 @@ def main():
     with c13:
             st.markdown(" ")
             st.markdown(" ")
-            qtable_img = "images/Q_Equation.png"
+            qtable_img = "WebApp/images/Q_Equation.png"
             st.image(qtable_img)
     st.markdown("""
             <div style='text-align: justify; font-size: 21.5px;'>
@@ -487,7 +485,7 @@ def main():
     
     c14,c15,c16 = st.columns([0.2,0.8,0.2])
     with c15:
-        q_algo = "images/q_algorithm.png"
+        q_algo = "WebApp/images/q_algorithm.png"
         st.image(q_algo, caption="Q Algorithm")  
 
     st.divider()
