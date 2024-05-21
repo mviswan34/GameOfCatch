@@ -538,11 +538,11 @@ def main():
     st.markdown(" ")
     st.markdown(" ")
     st.markdown(" ")
-    x1,x2,x3 =st.columns([2,1,2])
     st.markdown("""
             <div style='text-align: justify; font-size: 20px;'>
                 Would you like to tailor the algorithm's settings to your preference? If so, click on the configure button below, or else we shall proceed with their default values.
             </div>""", unsafe_allow_html=True)
+    x1,x2,x3 =st.columns([2,1,2])
     with x2:
         st.button("Configure settings", on_click=show_config)
 
@@ -550,28 +550,28 @@ def main():
     if st.session_state.show_config:
         cc6,mid1,cc7,mid2,cc8,mid3,cc9  = st.columns([0.8, 0.1, 1.1, 0.1, 0.9, 0.1, 1.1])
         with cc6:
-            st.markdown("#### Number of Episodes")
+            st.markdown("##### Number of Episodes")
             st.markdown("""<div style='text-align: justify; font-size: 18px;'>
                         This determines the total number of games the Q-learning algorithm will play to learn the optimal strategy.
                         </div>""", unsafe_allow_html=True)
             NUM_EPISODES = st.slider('N = ', min_value=1, max_value=50000, value=12000, step=1)
             NUM_EPISODES = NUM_EPISODES+1
         with cc7:
-            st.markdown("#### Epsilon (Exploration Rate)")
+            st.markdown("##### Epsilon (Exploration Rate)")
             st.markdown("""<div style='text-align: justify; font-size: 18px;'>
                         The probability that our agent will explore (i.e., choose a random action). A higher value promotes more exploration 
                         at the cost of possibly making more mistakes.
                         </div>""", unsafe_allow_html=True)
             EPSILON = st.slider('ε = ', min_value=0.0, max_value=1.0, value=0.85, step=0.01)
         with cc8:
-            st.markdown("#### Alpha (Learning Rate)")
+            st.markdown("##### Alpha (Learning Rate)")
             st.markdown("""<div style='text-align: justify; font-size: 18px;'>
                         Controls how much of the new Q-value estimate we'll adopt. A higher value makes our algorithm learn faster 
                         but can also make it unstable.
                         </div>""", unsafe_allow_html=True)
             ALPHA = st.slider('α = ', min_value=0.0, max_value=1.0, value=0.1, step=0.01)
         with cc9:
-            st.markdown("#### Gamma (Discount Factor)")
+            st.markdown("##### Gamma (Discount Factor)")
             st.markdown("""<div style='text-align: justify; font-size: 18px;'>
                         This value determines how much future rewards are valued compared to immediate rewards. 
                         A higher value promotes considering future rewards over immediate ones.
@@ -590,7 +590,7 @@ def main():
         st.session_state.trained_agent = None
     st.markdown(" ")
     st.markdown(" ")
-    ccc1, ccc2, ccc3 = st.columns([0.5,0.08,0.8])
+    ccc1, ccc2, ccc3 = st.columns([0.8,0.08,0.8])
     with ccc1:
         st.markdown("<h4 style='text-align: justify;'>Would you like to visualize some episodes during training?</h4>", unsafe_allow_html=True)
 
