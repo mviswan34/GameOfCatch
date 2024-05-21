@@ -332,7 +332,7 @@ def main():
         st.session_state.show_config = False
 
     #Introduction
-    st.markdown("""<div style='text-align: justify; font-size: 25px;'>
+    st.markdown("""<div style='text-align: justify; font-size: 22px;'>
                         Welcome to 'Code & Catch Quest: Programming AI for Strategic Play.' This site offers a clear view into the world of 
                 artificial intelligence as it tackles the realm of games. It's a place to see firsthand how AI can be taught to think, decide, 
                 and learn through Q-Learning and Deep Q-Learning. The journey begins with a simple game that serves as a testing ground for 
@@ -345,7 +345,7 @@ def main():
     c2,c3,c4 = st.columns([3,0.25,1])
     with c2:
         st.markdown("<h1>The Game</h1>", unsafe_allow_html=True)
-        st.markdown("""<div style='text-align: justify; font-size: 25px;'>
+        st.markdown("""<div style='text-align: justify; font-size: 22px;'>
                     Catch is a basic arcade game where you catch falling objects like fruits or eggs with a basket. 
                     You score a point for every catch and lose one for each miss. In this exploration, we'll train a computer to 
                     play Catch by itself. However, instead of the colorful game shown on the right, we use a simpler version for ease 
