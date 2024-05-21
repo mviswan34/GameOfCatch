@@ -363,7 +363,7 @@ def main():
                     </div>""", unsafe_allow_html=True)
     
     with c4:
-        image_path = "https://github.com/mviswan34/GameOfCatch/blob/main/WebApp/images/small.gif"
+        image_path = "WebApp/images/small.gif"
         st.image(image_path, caption="Credits:@vsgif.com")
 
     st.divider()
