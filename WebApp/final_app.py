@@ -6,7 +6,7 @@ import matplotlib.patches as patches
 import io
 import time
 import altair as alt
-
+import os
 
 ########################################################################## Q LEARNING #############################################################
 class GameOfCatch:
