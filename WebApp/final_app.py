@@ -331,6 +331,8 @@ def main():
     if 'show_config' not in st.session_state:
         st.session_state.show_config = False
 
+    st.write("Current working directory:", os.getcwd())
+
     #Introduction
     st.markdown("""<div style='text-align: justify; font-size: 25px;'>
                         Welcome to 'Code & Catch Quest: Programming AI for Strategic Play.' This site offers a clear view into the world of 
