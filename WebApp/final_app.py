@@ -470,6 +470,8 @@ def main():
     with c13:
             st.markdown(" ")
             st.markdown(" ")
+            st.markdown(" ")
+            st.markdown(" ")
             qtable_img = "WebApp/images/Q_Equation.png"
             st.image(qtable_img)
     st.markdown("""
