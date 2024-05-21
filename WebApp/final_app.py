@@ -538,11 +538,10 @@ def main():
     st.markdown(" ")
     st.markdown(" ")
     st.markdown(" ")
-    x1,x2 =st.columns([3.6,1])
-    with x1:
-        st.markdown("""
+    x1,x2,x3 =st.columns([2,1,2])
+    st.markdown("""
             <div style='text-align: justify; font-size: 20px;'>
-                Would you like to tailor the algorithm's settings to your preference? If so, click on the configure button, or else we shall proceed with their default values.
+                Would you like to tailor the algorithm's settings to your preference? If so, click on the configure button below, or else we shall proceed with their default values.
             </div>""", unsafe_allow_html=True)
     with x2:
         st.button("Configure settings", on_click=show_config)
