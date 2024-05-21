@@ -361,7 +361,7 @@ def main():
                     </div>""", unsafe_allow_html=True)
     
     with c4:
-        image_path = "images/small.gif"
+        image_path = "small.gif"
         st.image(image_path, caption="Credits:@vsgif.com")
 
     st.divider()
