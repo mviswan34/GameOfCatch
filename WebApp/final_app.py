@@ -456,11 +456,11 @@ def main():
                 3. The agent acts, and the environment provides feedback in the form of rewards or penalties.<br/>
             4. The Q-value for the taken action is recalculated with the Q-Function given on the left:
                         <ul style="list-style-type: square;">
-                    <li style="font-size: 20px;">Take the existing Q-value (knowledge before this move).</li>
-                    <li style="font-size: 20px;">Add a portion (determined by the learning rate, α) of:
+                    <li style="font-size: 18px;">Take the existing Q-value (knowledge before this move).</li>
+                    <li style="font-size: 18px;">Add a portion (determined by the learning rate, α) of:
                         <ul style="list-style-type: circle;">
-                            <li style="font-size: 20px;">The immediate reward received.</li>
-                            <li style="font-size: 20px;">Plus the discounted (by a factor, γ) best Q-value for the next state (what the agent expects to 
+                            <li style="font-size: 18px;">The immediate reward received.</li>
+                            <li style="font-size: 18px;">Plus the discounted (by a factor, γ) best Q-value for the next state (what the agent expects to 
                             gain in the future).</li>
                         </ul>
                     </li>
@@ -495,7 +495,7 @@ def main():
     st.markdown("<h1>TRAIN THE AGENT</h1>", unsafe_allow_html=True)
     st.markdown(" ")
 
-    c17,c18,c19 = st.columns([1,0.2,1])
+    c17,c18,c19 = st.columns([1,0.09,1])
     with c17:
         st.markdown("""
             <div style='text-align: justify; font-size: 20px;'>
