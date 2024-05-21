@@ -342,7 +342,7 @@ def main():
     
     # The Game
     st.divider()
-    c2,c3,c4 = st.columns([3,0.25,1.2])
+    c2,c3,c4 = st.columns([3,0.25,1.1])
     with c2:
         st.markdown("<h1>The Game</h1>", unsafe_allow_html=True)
         st.markdown("""<div style='text-align: justify; font-size: 20px;'>
@@ -372,9 +372,9 @@ def main():
     ### What is Q Learning
     c5,c6,c7 = st.columns([2.4,0.1,2])
     with c5:
-        st.markdown("""<div style='text-align: justify; font-size: 23.5px;'>
+        st.markdown("""<div style='text-align: justify; font-size: 22x;'>
                     <b>What is Q-Learning?</b></div>""", unsafe_allow_html=True)
-        st.markdown("""<div style='text-align: justify; font-size: 21.5px;'>
+        st.markdown("""<div style='text-align: justify; font-size: 20px;'>
                 Q-learning is a method that helps an AI agent learn the best moves through practice, aiming for the highest rewards from its 
                     actions. The "Q" stands for "quality," assessing how each move contributes to the ultimate goal of winning the game. 
                     In our game of Catch, Q-learning is like a coach for the AI agent, directing it on the most successful strategies to 
@@ -385,20 +385,20 @@ def main():
         st.markdown("""<style>
                     /* Targeting the container of the radio option text */
                     div[data-testid="stMarkdownContainer"] > 
-                    p {font-size: 23.5px !important;}
+                    p {font-size: 22px !important;}
                     </style>
                     """, unsafe_allow_html=True)
         property = st.radio("**What are the model properties?**", ["Model-Free", "Value-Based", "Off-Policy"], horizontal = True)
 
         if property == "Model-Free":
-            st.markdown("""<div style='text-align: justify; font-size: 21.5px;'>The agent doesn't know the rules of the game in advance. 
+            st.markdown("""<div style='text-align: justify; font-size: 20px;'>The agent doesn't know the rules of the game in advance. 
                         It learns by playing - catching objects earning points, missing them losing points.</div>""", unsafe_allow_html=True)
         elif property == "Value-Based":
-            st.markdown("""<div style='text-align: justify; font-size: 21.5px;'>Each possible move (left, right, stay) 
+            st.markdown("""<div style='text-align: justify; font-size: 20px;'>Each possible move (left, right, stay) 
                         gets a score based on its potential to earn more points in the future. The agent learns to choose moves with 
                         higher scores.</div>""", unsafe_allow_html=True)
         elif property == "Off-Policy":
-            st.markdown("""<div style='text-align: justify; font-size: 21.5px;'>The agent can learn from the success of other agents' strategies, 
+            st.markdown("""<div style='text-align: justify; font-size: 20px;'>The agent can learn from the success of other agents' strategies, 
                         not just its own.</div>""", unsafe_allow_html=True)
     
     ### How does Q-Learning Work?
@@ -412,9 +412,9 @@ def main():
             arrow = "WebApp/images/Arrow_right.png"
             st.image(arrow)
         with t2:
-            st.markdown("""<div style='text-align: justify; font-size: 23.5px;'>
+            st.markdown("""<div style='text-align: justify; font-size: 22px;'>
                 <b>Q Table</b></div>""", unsafe_allow_html=True)
-        st.markdown("""<div style='text-align: justify; font-size: 21.5px;'>
+        st.markdown("""<div style='text-align: justify; font-size: 20px;'>
                     In the Game of Catch, our AI agent uses what's known as a Q-table to guide its decisions. 
                         The Q-table is a grid of values representing all possible states (positions of the falling objects) 
                         and actions (movements of the basket). Initially, this table is filled with zeroes, but as the game progresses, 
@@ -436,10 +436,10 @@ def main():
             arrow = "WebApp/images/Arrow_right.png"
             st.image(arrow)
     with t2:
-            st.markdown("""<div style='text-align: justify; font-size: 23.5px;'>
+            st.markdown("""<div style='text-align: justify; font-size: 22px;'>
                 <b>Q Function</b></div>""", unsafe_allow_html=True) 
     st.markdown("""
-            <div style='text-align: justify; font-size: 21.5px;'>
+            <div style='text-align: justify; font-size: 20px;'>
                 Each entry in the Q-table represents the "Q-value," of taking a specific action in a particular state. 
                 This value is updated using the Q-function, which combines immediate rewards with anticipated future rewards. 
                 The process involves the following steps:<br/>
@@ -450,17 +450,17 @@ def main():
     c11,c12,c13 = st.columns([2,0.01,1])  
     with c11:
             st.markdown("""
-            <div style='text-align: justify; font-size: 21.5px;'>
+            <div style='text-align: justify; font-size: 20px;'>
                         1. Start with a Q-table filled with zeroes, representing an inexperienced agent.<br/>
                 2. The agent selects an action based on either exploration (trying new things) or exploitation (using known information).<br/>
                 3. The agent acts, and the environment provides feedback in the form of rewards or penalties.<br/>
             4. The Q-value for the taken action is recalculated with the Q-Function given on the left:
                         <ul style="list-style-type: square;">
-                    <li style="font-size: 22px;">Take the existing Q-value (knowledge before this move).</li>
-                    <li style="font-size: 22px;">Add a portion (determined by the learning rate, α) of:
+                    <li style="font-size: 20px;">Take the existing Q-value (knowledge before this move).</li>
+                    <li style="font-size: 20px;">Add a portion (determined by the learning rate, α) of:
                         <ul style="list-style-type: circle;">
-                            <li style="font-size: 22px;">The immediate reward received.</li>
-                            <li style="font-size: 22px;">Plus the discounted (by a factor, γ) best Q-value for the next state (what the agent expects to 
+                            <li style="font-size: 20px;">The immediate reward received.</li>
+                            <li style="font-size: 20px;">Plus the discounted (by a factor, γ) best Q-value for the next state (what the agent expects to 
                             gain in the future).</li>
                         </ul>
                     </li>
@@ -473,7 +473,7 @@ def main():
             qtable_img = "WebApp/images/Q_Equation.png"
             st.image(qtable_img)
     st.markdown("""
-            <div style='text-align: justify; font-size: 21.5px;'>
+            <div style='text-align: justify; font-size: 20px;'>
                 This updated Q-value reflects the agent's improved understanding after considering both the immediate result and the 
                 potential future benefits.
                 By repeating these steps, the Q-learning algorithm helps the agent learn the optimal policy, guiding it toward actions that 
@@ -496,7 +496,7 @@ def main():
     c17,c18,c19 = st.columns([1,0.2,1])
     with c17:
         st.markdown("""
-            <div style='text-align: justify; font-size: 21.5px;'>
+            <div style='text-align: justify; font-size: 20px;'>
                 Let us start by outlining the game's playing field. Set the size of the grid:
             </div>
             """, unsafe_allow_html=True)
@@ -511,7 +511,7 @@ def main():
                 GRID_HEIGHT = st.slider("Height",4,20,5)
     with c19:
         st.markdown("""
-            <div style='text-align: justify; font-size: 21.5px;'>
+            <div style='text-align: justify; font-size: 20px;'>
                     Stochastic Component:
                     Set the ball's probability to fall straight downwards:
             </div>
@@ -539,7 +539,7 @@ def main():
     x1,x2 =st.columns([3.6,1])
     with x1:
         st.markdown("""
-            <div style='text-align: justify; font-size: 21.5px;'>
+            <div style='text-align: justify; font-size: 20px;'>
                 Would you like to tailor the algorithm's settings to your preference? If so, click on the configure button, or else we shall proceed with their default values.
             </div>""", unsafe_allow_html=True)
     with x2:
@@ -612,7 +612,7 @@ def main():
     ### Test the algorithm
     st.markdown("<h1>TEST THE AGENT</h1>", unsafe_allow_html=True)
     st.markdown("""
-            <div style='text-align: justify; font-size: 21.5px;'>
+            <div style='text-align: justify; font-size: 20px;'>
                 On how many episodes would you like to test the agent?
             </div>""", unsafe_allow_html=True)
 
