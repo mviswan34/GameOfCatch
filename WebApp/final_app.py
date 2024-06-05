@@ -137,7 +137,7 @@ def visualize_and_train(game, prob, visualize, visualize_every_n_episodes=1000):
 
     # Initializing placeholders and columns
     if visualize == "True":
-        ss1, ss2 = st.columns([1,3])
+        ss1, ss2 = st.columns([1.5,3])
         with ss1:
             game_placeholder = st.empty()
 
