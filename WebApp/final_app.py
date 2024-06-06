@@ -109,7 +109,7 @@ def plot_game_environment(state, grid_height, grid_width, reward=None):
     # Create a gold rectangle for the basket
     basket_width = 0.6
     basket_height = 0.3
-    basket_color = 'gold'
+    basket_color = 'goldenrod'
     # Calculate the lower left corner of the basket to center it in the cell
     basket_x = basket_col + 0.5
     basket_y = 0.5 
