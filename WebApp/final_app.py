@@ -106,10 +106,10 @@ def plot_game_environment(state, grid_height, grid_width, reward=None):
     ball_circle = patches.Circle((ball_x, ball_y), radius=0.2, facecolor='red')
     plt.gca().add_patch(ball_circle)
 
-    # Create a brown rectangle for the basket
+    # Create a gold rectangle for the basket
     basket_width = 0.6
     basket_height = 0.3
-    basket_color = 'brown'
+    basket_color = 'gold'
     # Calculate the lower left corner of the basket to center it in the cell
     basket_x = basket_col + 0.5
     basket_y = 0.5 
